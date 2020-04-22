@@ -1,0 +1,171 @@
+$color: #8c9494;
+$colorSub: #fff;
+$colorMenu: #3c3d42;
+$sizeText: 16px;
+$fontFamily: 'Raleway', sans-serif;
+
+body {
+	color: $color;
+	font-family: $fontFamily;
+}
+a {
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+
+}
+
+//Global properties 
+.section {
+	padding: 50px 0;
+	@media screen and (max-width: 768px) {
+		padding: 20px 0;
+	}
+}
+.color {
+	&--main {
+		color: $color;
+	}
+	&--menu {
+		color: $colorMenu;
+	}
+	&--sub {
+		color: $colorSub;
+	}
+}
+.title {
+	font-size: 36px;
+	font-weight: 700;
+	&__sub {
+		font-weight: 300;
+	}
+}
+%btns {
+	font-weight: 700;
+	border: 1px solid $color;
+	width: 240px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 21px;
+	transition: 0.3s all linear;	
+}
+.btn-main {
+	@extend %btns;
+	color: $colorSub;
+	border-color: $colorSub;
+	&:hover {
+		color: $color;
+		border-color: $color;
+	}
+}
+
+//HEADER 
+.header {
+	height: 100vh;
+	background: url('../img/header.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+//MENU
+.logo {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 900;
+	font-size: 30px;
+}
+.navbar {
+	background: $colorSub !important;
+}
+//FEATURE section 
+.feature {
+	position: relative;
+	&__bar {
+		font-size: 20px;
+		border-right: 1px solid rgba(0, 0, 0, 0.3);
+		&__item {
+			position: relative;
+           	transition: 0.2s all linear;
+           	// height: 80px;
+           	&:hover {
+           		color: #5dca88;
+           		cursor: pointer;
+           		&:after {
+           			opacity: 1;
+           		}
+           	}
+			&:after{
+                content: "";
+                position: absolute;
+                right: -6px;
+                top: 0;
+                width: 11px;
+                height: 80px;
+                background-color: #5dca88;
+                opacity: 0;
+                transition: 0.2s all linear;
+            }
+            &--active {
+            	&:after {
+            		opacity: 1;
+            	}
+            }
+		}
+		&__icon {
+			font-size: 40px;
+		}
+
+	}
+	&__body {
+		position: relative;
+		&__item {
+			position: absolute;
+			top: 0;
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			&--active {
+				opacity: 1;
+				display: flex;
+			}
+			&__icon {
+				text-align: center;
+				font-size: 220px;
+			}
+		}
+	}
+}
+//GALLERY section
+%gallery-arrow {
+	position: absolute;
+	top: 45%;
+	font-size: 45px;
+	cursor: pointer;
+	transform: scale(1);
+	transition: 0.2s all linear;
+	&:hover {
+		transform: scale(1.1);
+		transform-origin: center;
+	}
+}
+.gallery {
+	padding: 50px 0;
+	&__slide {
+		text-align: center;
+	}
+	&__arrow {		
+		&--prev {
+			@extend %gallery-arrow;
+			left: -30px;
+		}
+		&--next {
+			@extend %gallery-arrow;
+			right: -30px;
+		}
+	}
+}
+.slick-list {
+	
+}

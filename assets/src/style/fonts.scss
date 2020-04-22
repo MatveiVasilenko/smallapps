@@ -1,0 +1,40 @@
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Raleway"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/Raleway-Regular.ttf") format("truetype"),
+		 url("../fonts/Raleway-Regular.eot") format("eot"),
+		 url("../fonts/Raleway-Regular.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 400; 
+}
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Raleway"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/Raleway-Bold.ttf") format("truetype"),
+		 url("../fonts/Raleway-Bold.eot") format("eot"),
+		 url("../fonts/Raleway-Bold.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 700; 
+}
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Raleway"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/Raleway-Light.ttf") format("truetype"),
+		 url("../fonts/Raleway-Light.eot") format("eot"),
+		 url("../fonts/Raleway-Light.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 300; 
+}
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "ProximaNova"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/ProximaNova-Black.ttf") format("truetype"),
+		 url("../fonts/ProximaNova-Black.eot") format("eot"),
+		 url("../fonts/ProximaNova-Black.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 900; 
+}
